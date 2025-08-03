@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Shopping List</title>
+   
+  </head>
+  <body>
+
+    <h1>Shopping List</h1>
+
+    <div class="entry">
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item">
+      <button>Add item</button>
+    </div>
+
+    <ul>
+
+    </ul>
+
+    <script>
+        const list = document.querySelector("ul");
+        const input = document.querySelector("input");
+        const btn = document.querySelector("button");
+        btn.className = 'btn-box-dark';
+
+       btn.onclick = function(){
+            let text = input.value;
+            const textNode = document.createTextNode = ("  ");
+            const bullet = document.createElement("li");
+
+            const newSpan = document.createElement("span");
+            bullet.appendChild(newSpan);
+            const newBtn = document.createElement("button");
+            newBtn.className = 'btn';
+            bullet.appendChild(newBtn);
+            newSpan.textContent = text; 
+            newBtn.textContent = "delete.";
+            list.appendChild(bullet);
+
+         
+            newBtn.onclick = function (){
+                list.removeChild(bullet);
+            }
+
+        }
+    </script>
+  </body>
+</html>
