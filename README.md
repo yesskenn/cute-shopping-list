@@ -13,6 +13,6 @@ acknowledgements:
 
 - improve accessibility
 - improve mobile-responsiveness
-- clear out input field before adding a new value.
+- ~~clear out input field before adding a new value.~~
 
 [EOF]

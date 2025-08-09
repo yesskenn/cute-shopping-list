@@ -28,10 +28,11 @@
         btn.className = 'btn-box-dark';
 
        btn.onclick = function(){
+      
             let text = input.value;
-            const textNode = document.createTextNode = ("  ");
-            const bullet = document.createElement("li");
+              if (text.trim() !== ''){
 
+            const bullet = document.createElement("li");
             const newSpan = document.createElement("span");
             bullet.appendChild(newSpan);
             const newBtn = document.createElement("button");
@@ -40,13 +41,17 @@
             newSpan.textContent = text; 
             newBtn.textContent = "delete.";
             list.appendChild(bullet);
+            input.value = '';
+  
+              
+            };
 
          
             newBtn.onclick = function (){
                 list.removeChild(bullet);
-            }
-
-        }
+            };
+            
+        };
     </script>
   </body>
 </html>
